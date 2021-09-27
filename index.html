@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,6 +13,16 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preload" as="image" href="assets/ArtistResearcherTeacher.jpg" />
+    <link rel="preload" as="image" href="assets/WideAwakeness.jpg" />
+    <link rel="preload" as="image" href="assets/PersonalisedLearning.jpg" />
+    <link rel="preload" as="image" href="assets/Creativity.jpg" />
+    <link rel="preload" as="image" href="assets/Reflection.jpg" />
+    <link rel="preload" as="image" href="assets/Inclusivity.jpg" />
+    <link rel="preload" as="image" href="assets/CrossCurriculum.jpg" />
+    <link rel="preload" as="image" href="assets/Obstacles.jpg" />
+    <link rel="preload" as="image" href="assets/Fun.jpg" />
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/reveal.css">
@@ -79,7 +89,7 @@
         <section>
             <div class="chapter">
                 <div class="page">
-                    <img alt="artist-researcher-teacher" src="./assets/ArtistResearcherTeacher.jpg"/>
+                    <img  alt="artist-researcher-teacher" data-src="assets/ArtistResearcherTeacher.jpg"/>
                 </div>
                 <div class="page">
                     <div>
@@ -111,7 +121,7 @@
         <section>
             <div class="chapter">
                 <div class="page">
-                    <img alt="wide-awakeness" src="./assets/WideAwakeness.jpg"/>
+                    <img alt="wide-awakeness" data-src="assets/WideAwakeness.jpg"/>
                 </div>
                 <div class="page">
                     <div>
@@ -143,7 +153,7 @@
         <section>
             <div class="chapter">
                 <div class="page">
-                    <img alt="personalised-learning" src="./assets/PersonalisedLearning.jpg"/>
+                    <img alt="personalised-learning" data-src="assets/PersonalisedLearning.jpg"/>
                 </div>
                 <div class="page">
                     <div>
@@ -178,7 +188,7 @@
         <section>
             <div class="chapter">
                 <div class="page">
-                    <img alt="kitty" src="./assets/Creativity.jpg"/>
+                    <img alt="kitty" data-src="assets/Creativity.jpg"/>
                 </div>
                 <div class="page">
                     <div>
@@ -216,7 +226,7 @@
         <section>
             <div class="chapter">
                 <div class="page">
-                    <img alt="reflection" src="./assets/Reflection.jpg"/>
+                    <img alt="reflection" data-src="assets/Reflection.jpg"/>
                 </div>
                 <div class="page">
                     <div>
@@ -252,7 +262,7 @@
         <section>
             <div class="chapter">
                 <div class="page">
-                    <img alt="inclusivity" src="./assets/Inclusivity.jpg"/>
+                    <img alt="inclusivity" data-src="assets/Inclusivity.jpg"/>
                 </div>
                 <div class="page">
                     <div>
@@ -288,7 +298,7 @@
         <section>
             <div class="chapter">
                 <div class="page">
-                    <img alt="cross-curriculum" src="./assets/CrossCurriculum.jpg"/>
+                    <img alt="cross-curriculum" data-src="assets/CrossCurriculum.jpg"/>
                 </div>
                 <div class="page">
                     <div>
@@ -324,7 +334,7 @@
         <section>
             <div class="chapter">
                 <div class="page">
-                    <img alt="obstacles" src="./assets/Obstacles.jpg"/>
+                    <img alt="obstacles" data-src="assets/Obstacles.jpg"/>
                 </div>
                 <div class="page">
                     <div>
@@ -359,7 +369,7 @@
         <section>
             <div class="chapter">
                 <div class="page">
-                    <img alt="fun" src="./assets/Fun.jpg"/>
+                    <img alt="fun" data-src="assets/Fun.jpg"/>
                 </div>
                 <div class="page">
                     <div>
@@ -523,23 +533,22 @@
         center: true,
         hash: true,
         disableLayout: true,
-
-        transition: 'fade', // none/fade/slide/convex/concave/zoom
+        transition: 'none', // none/fade/slide/convex/concave/zoom
 
         // More info https://github.com/hakimel/reveal.js#dependencies
         dependencies: [
-            {
-                src: 'plugin/markdown/marked.js',
-                condition: function () { return !!document.querySelector('[data-markdown]'); }
-            },
-            {
-                src: 'plugin/markdown/markdown.js',
-                condition: function () { return !!document.querySelector('[data-markdown]'); }
-            },
-            { src: 'plugin/highlight/highlight.js', async: true },
-            { src: 'plugin/search/search.js', async: true },
-            { src: 'plugin/zoom-js/zoom.js', async: true },
-            { src: 'plugin/notes/notes.js', async: true }
+            // {
+            //     src: 'plugin/markdown/marked.js',
+            //     condition: function () { return !!document.querySelector('[data-markdown]'); }
+            // },
+            // {
+            //     src: 'plugin/markdown/markdown.js',
+            //     condition: function () { return !!document.querySelector('[data-markdown]'); }
+            // },
+            // { src: 'plugin/highlight/highlight.js', async: true },
+            // { src: 'plugin/search/search.js', async: true },
+            // { src: 'plugin/zoom-js/zoom.js', async: true },
+            // { src: 'plugin/notes/notes.js', async: true }
         ]
     });
 
@@ -666,6 +675,7 @@
         border: none;
         box-shadow: none;
         /*background: pink;*/
+        position:relative !important;
     }
 
     .reveal .slides > section, .reveal .slides > section > section {
